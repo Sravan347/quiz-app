@@ -1,0 +1,218 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+/* Container Styling */
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  animation: slideIn 0.5s ease-out;
+}
+
+/* Slide-in Animation */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Header Styling */
+.header .heading {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Section for Questions */
+.section {
+  margin-bottom: 20px;
+}
+
+.question {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Option Buttons */
+.lists {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+button {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 2px solid transparent;
+  padding: 15px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+button h2 {
+  margin: 0;
+}
+
+/* Button hover effect with a gradient border */
+button:hover {
+  border-color: #fff;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+button.selected {
+  background-color: #4caf50;
+  border-color: #fff;
+}
+
+button.selected:hover {
+  background-color: #45a049;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+button:disabled:hover {
+  border-color: transparent;
+}
+
+/* Footer: Score, Next Button, Question Tracker */
+.footer {
+  margin-top: 20px;
+}
+
+.answer-feedback {
+  font-size: 1.3rem;
+  margin: 10px 0;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Next Button */
+.next-button {
+  background-color: #ff9800;
+  color: #fff;
+  padding: 12px 30px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.next-button:hover {
+  background-color: #ff5722;
+}
+
+/* Score & Progress Tracker */
+.score {
+  font-size: 1.5rem;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  .header .heading {
+    font-size: 1.5rem;
+  }
+
+  .question {
+    font-size: 1.2rem;
+  }
+
+  button {
+    font-size: 1rem;
+  }
+
+  .next-button {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+  }
+
+  .header .heading {
+    font-size: 1.2rem;
+  }
+
+  .question {
+    font-size: 1rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .next-button {
+    font-size: 0.8rem;
+    padding: 8px 15px;
+  }
+}
